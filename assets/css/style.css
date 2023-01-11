@@ -69,3 +69,20 @@ main div {
 .card:hover .front-face {
     transform: rotateY(-180deg);
 }
+
+
+@media (max-width:600px) {
+
+h1 {
+    font-size:36px;
+    line-height:42px;
+    text-align:center;
+}
+
+main div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+}
