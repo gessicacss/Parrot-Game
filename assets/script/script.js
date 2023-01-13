@@ -1,11 +1,11 @@
 const images = [
-    "/assets/img/bobrossparrot.gif",
-    "/assets/img/explodyparrot.gif",
-    "/assets/img/fiestaparrot.gif",
-    "/assets/img/metalparrot.gif",
-    "/assets/img/revertitparrot.gif",
-    "/assets/img/tripletsparrot.gif",
-    "/assets/img/unicornparrot.gif"
+    "./assets/img/bobrossparrot.gif",
+    "./assets/img/explodyparrot.gif",
+    "./assets/img/fiestaparrot.gif",
+    "./assets/img/metalparrot.gif",
+    "./assets/img/revertitparrot.gif",
+    "./assets/img/tripletsparrot.gif",
+    "./assets/img/unicornparrot.gif"
 ];
 let cardHtml = document.querySelector('div');
 let firstCard,
