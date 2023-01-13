@@ -41,7 +41,7 @@ function startingGame () {
         cardHtml.innerHTML += `
         <div data-test="card" class="card" onclick="revealCard(this)" >
             <div class="front-face face">
-                <img data-test="face-down-image" src="img/back.png" alt "desenho de um papagaio">
+                <img data-test="face-down-image" src="./assets/img/back.png" alt "desenho de um papagaio">
             </div>
             <div class="back-face face">
                 <img data-test="face-up-image" src="./assets/${newDeck[i]}" alt="gif de um papagaio dançando"
