@@ -1,11 +1,11 @@
 const images = [
-    "./assets/img/bobrossparrot.gif",
-    "./assets/img/explodyparrot.gif",
-    "./assets/img/fiestaparrot.gif",
-    "./assets/img/metalparrot.gif",
-    "./assets/img/revertitparrot.gif",
-    "./assets/img/tripletsparrot.gif",
-    "./assets/img/unicornparrot.gif"
+    "img/bobrossparrot.gif",
+    "img/explodyparrot.gif",
+    "img/fiestaparrot.gif",
+    "img/metalparrot.gif",
+    "img/revertitparrot.gif",
+    "img/tripletsparrot.gif",
+    "img/unicornparrot.gif"
 ];
 let cardHtml = document.querySelector('div');
 let firstCard,
@@ -41,10 +41,10 @@ function startingGame () {
         cardHtml.innerHTML += `
         <div data-test="card" class="card" onclick="revealCard(this)" >
             <div class="front-face face">
-                <img data-test="face-down-image" src="./assets/img/back.png" alt "desenho de um papagaio">
+                <img data-test="face-down-image" src="img/back.png" alt "desenho de um papagaio">
             </div>
             <div class="back-face face">
-                <img data-test="face-up-image" src="${newDeck[i]}" alt="gif de um papagaio dançando"
+                <img data-test="face-up-image" src="./assets/${newDeck[i]}" alt="gif de um papagaio dançando"
             </div>
         </div>
         `
