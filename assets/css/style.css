@@ -62,12 +62,25 @@ main div {
     transform: rotateY(180deg);
 }
 
-.revel .back-face {
+.reveal .back-face {
     transform: rotateY(0deg);
 }
 
-.revel .front-face {
+.reveal .front-face {
     transform: rotateY(-180deg);
+}
+
+.timer {
+    position:fixed;
+    top: 10px;
+    right:15px;
+    width:50px;
+    height:40px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:#75b79e;
+    font-size:36px;
 }
 
 
