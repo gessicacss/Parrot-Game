@@ -110,4 +110,18 @@ function endGame () {
     restartGame();
 }
 
+function restartGame (){
+    let response = prompt(`Gostaria de jogar novamente?`);
+
+    while(response !== 'sim' && response !== 'não') {
+        response = prompt(`Gostaria de jogar novamente? digite sim ou não`);
+    }
+    if (response === 'sim') {
+        document.location.reload();
+    }
+    if (response === 'não') {
+        alert (`Okay, obrigada por jogar, espero que tenha se divertido!`);
+    }
+}
+
 startingGame();
