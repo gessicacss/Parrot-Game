@@ -71,8 +71,8 @@ main div {
 }
 
 .timer {
-    position:fixed;
-    top: 10px;
+    position:absolute;
+    top: 0px;
     right:15px;
     width:50px;
     height:40px;
