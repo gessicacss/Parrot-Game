@@ -119,9 +119,6 @@ function restartGame (){
     if (response === 'sim') {
         document.location.reload();
     }
-    if (response === 'não') {
-        alert (`Okay, obrigada por jogar, espero que tenha se divertido!`);
-    }
 }
 
 startingGame();
