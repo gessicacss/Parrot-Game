@@ -78,8 +78,6 @@ function shuffle() {
 	return Math.random() - 0.5; 
 }
 
-
-
 function compareCards (firstCard, secondCard) {
     img = firstCard.querySelector('.back-face img');
     imgTwo = secondCard.querySelector('.back-face img');
@@ -95,6 +93,16 @@ function compareCards (firstCard, secondCard) {
 function turnCardsAround () {
     firstCard.classList.remove('reveal');
     secondCard.classList.remove('reveal');
+}
+
+function gameTimer () {
+    timer++;
+    document.querySelector('.timer').innerHTML = timer;
+    
+    let totalCards = document.querySelectorAll('.card.reveal').length;
+    if (totalCards === quantityCards){
+        clearInterval(stopTimer);
+    }
 }
 
 startingGame();
