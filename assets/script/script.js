@@ -105,4 +105,9 @@ function gameTimer () {
     }
 }
 
+function endGame () {
+    alert (`Você ganhou em ${countPlayed} jogadas! A duração do jogo foi de ${timer} segundos!`);
+    restartGame();
+}
+
 startingGame();
