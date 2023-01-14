@@ -91,4 +91,10 @@ function compareCards (firstCard, secondCard) {
     }
 }
 
+
+function turnCardsAround () {
+    firstCard.classList.remove('reveal');
+    secondCard.classList.remove('reveal');
+}
+
 startingGame();
