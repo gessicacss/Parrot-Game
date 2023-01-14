@@ -29,8 +29,8 @@ function startingGame () {
     }
 
     const newDeck = [];
-
-    for (let j = 0; j < quantityCards/2; j++) {
+    let halfCards = quantityCards / 2;
+    for (let j = 0; j < halfCards; j++) {
         newDeck.push(images[j]);
         newDeck.push(images[j]);
     }
@@ -51,6 +51,7 @@ function startingGame () {
     }
 
     limitOfCards = 2;
+    stopTimer = setInterval(gameTimer, 1000);
 }
 
 function revealCard (card) {
@@ -62,19 +63,32 @@ function revealCard (card) {
     let turnedCards = document.querySelectorAll('.card.reveal');
     countPlayed++;
     if((turnedCards.length)%2 !== 0 ) {
-        secondCard = card;
+        firstCard = card;
     }
     if ((turnedCards.length)%2 === 0) {
-        firstCard = card;
-        compareCards(card, secondCard);
+        secondCard = card;
+        compareCards(firstCard, secondCard);
+    }
+    if (turnedCards.length === quantityCards) {
+        setTimeout(endGame, 1000);
     }
 }
+
 function shuffle() { 
 	return Math.random() - 0.5; 
 }
 
+
+
+function compareCards (firstCard, secondCard) {
+    img = firstCard.querySelector('.back-face img');
+    imgTwo = secondCard.querySelector('.back-face img');
+    if (img.src !== imgTwo.src) {
+        setTimeout(turnCardsAround, 1000);
+    }
+    if (img.src === imgTwo.src) {
+        limitOfCards += 2;
+    }
+}
+
 startingGame();
-//criar uma função que caso as cartas tenham a mesma imagem, ela permaneça virada e permita que continue virando as outroas
-//criar uma função que quando a quantidade de cartas colocada for a mesma que a quantidade de cartas viradas, ela crie um alerta dizendo que o jogo terminou
-// e que essa função diga quantos clicks tiveram, e em quanto tempo foi finalizado
-// criar uma função que pergunte ao terminar o jogo, se gostaria de recomeçar (para isso, faria sentido se o prompt de quantidade de jogos estivesse na função startingGame)
