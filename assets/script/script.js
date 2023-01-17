@@ -28,6 +28,8 @@ function startingGame () {
         quantityCards = prompt(`Quantas cartas quer jogar?`);
     }
 
+    images.sort(shuffle);
+
     const newDeck = [];
     let halfCards = quantityCards / 2;
     for (let j = 0; j < halfCards; j++) {
